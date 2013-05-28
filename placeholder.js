@@ -16,14 +16,14 @@ $('input, textarea').keydown(function(){ // Hides label when value is entered, n
 var prefill = $('input'); // Hides label if field is pre-populated (Clicked 'back' to come and edit)
 $(prefill).each(function(){
 	var preval = $(this).val();
-	if ( (preval) != ('') ) {
+	if ( (preval) !== ('') ) {
 		$(this).parent().find('label').hide();
 	}
 });
 
 $('input, textarea').blur(function(){ // Shows label if value is empty
 	var blurry = $(this).val();
-	if ( (blurry) == ('') ) {
+	if ( (blurry) === ('') ) {
 		$(this).parent().find('label').show();
 	}
 });
